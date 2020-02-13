@@ -17,7 +17,7 @@ submitButton.addEventListener('click', function(event) {
   if (initialText !== "") {
     return highscoreSpan.textContent = initialText;
   }
-  // initialInput.push(initialText);
+ 
   initialInput.value = "";
 });
 
