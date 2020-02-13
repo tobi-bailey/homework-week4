@@ -61,7 +61,6 @@ choiceCEl.addEventListener('click', answerQuestion);
 var choiceDEl = document.getElementById("D");
 choiceDEl.addEventListener('click', answerQuestion);
 
-
 startButton.addEventListener('click', startQuiz);
 
 function loadScorePage() {
@@ -90,10 +89,11 @@ function setNextQuestion(){
 function answerQuestion(event){
   var actualAnswer = event.target.id;
   var question = questions[currentQuestionIndex];
-  var correctAnswer = question.correct;
-  if(actualAnswer == correctAnswer){
-    points++;
+  var correctAnswer = questions[currentQuestionIndex].correct;
+  if(actualAnswer === correctAnswer){
+    points+=5;
   }
+  console.log(actualAnswer);
   console.log(points);
 
   currentQuestionIndex++;

@@ -1,0 +1,31 @@
+h3{
+    padding-top: 50px;
+    font-weight: bold;
+}
+
+.row {
+    padding-top: 18px;
+}
+
+.form-group{
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+
+.btn-primary,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus {
+    background-color: #572982;
+    border-color: #572982;
+}
+
+.btn-primary:hover {
+    background-color: #aa6ce4;
+    border-color: #572982;
+}
+
+.hide {
+    display: none;
+}
