@@ -1,13 +1,6 @@
-// const is a good choice!
-
-var points = 0;  // stores the points accumalated.
+var points = 0;  
 var highScores = [];
 
-// highScore.push({
-//   userInitials: 'CK',
-//   score:points
-// });
-// points = 0;
 
 var currentQuestionIndex = 0;
 
@@ -50,6 +43,7 @@ var startButton = document.getElementById('start-quiz');
 var questionContainer = document.getElementById('question-container');
 var questionEl = document.getElementById('question');
 var answerButtonElement = document.getElementById ('answer-buttons');
+var submissionResponseEl = document.getElementById('right-wring');
 
 // answers
 var choiceAEl = document.getElementById("A");
@@ -83,7 +77,6 @@ function setNextQuestion(){
     choiceDEl.addEventListener('click', loadScorePage);
   }
 
-  // wait for users answer.
 }
 
 function answerQuestion(event){
@@ -92,9 +85,13 @@ function answerQuestion(event){
   var correctAnswer = questions[currentQuestionIndex].correct;
   if(actualAnswer === correctAnswer){
     points+=5;
+    // var correctResponse = "Right!";
+    // submissionResponseEl.textContent = correctResponse;
   }
-  console.log(actualAnswer);
-  console.log(points);
+  // else(actualAnswer !== correctAnswer){
+  //   incorrectResponse = "Wrong!";
+  //   submissionResponseEl.textContent = incorrectResponse;
+  // };
 
   currentQuestionIndex++;
   setNextQuestion();
@@ -102,7 +99,6 @@ function answerQuestion(event){
 
 
 function startQuiz() {
-    console.log('Started');
     startButton.classList.add('hide');
     questionContainer.classList.remove('hide');
     setNextQuestion();

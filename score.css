@@ -29,3 +29,9 @@ h3{
 .hide {
     display: none;
 }
+
+#right-wrong{
+    font-size: 30px;
+    font-style: italic;
+    color: grey;
+}

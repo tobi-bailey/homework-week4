@@ -12,59 +12,65 @@
   <title>Coding Quiz Challenge</title>
 </head>
 <body>
-    <div id="start-quiz" class="container">
-        <div class="row">
-            <div class="col-md-3"></div>
-            <div class="col-md-6">
-                <header>
-                <h3>All done!</h3>   
-                </header>    
-            </div>
-            <div class="col-md-3"></div>
-        </div>
-        <div class="row">
-            <div class="col-md-3"></div>
-            <div class="col-md-6">
-                <div id="final-score">Your final score is 22</div>       
-            </div>
-            <div class="col-md-3"></div>
-        </div>
-        <div class="row">
-            <div class="col-md-3"></div>
-            <div class="col-md-6">
-                <form class="form-inline">
-                   Enter Initials:
-                    <div class="form-group mx-sm-3 mb-2">
-                        <label for="inputInitials" class="sr-only"></label>
-                        <input type="initials" class="form-control" id="inputInitials2" placeholder="">
-                    </div>
-                        <button type="submit" id="submit" class="btn btn-primary mb-2">Submit</button>
-                    <div class="col-md-3"></div>
-                </form>
-            </div>
-        </div>
-        <div class="hide">
-        <div class="row">
-            <div class="col-md-3"></div>
-            <div class="col-md-6">
-                    <h2>Highscores</h2>
-                    <p><strong>1.</strong><span id="highscores"></span>
+    <div id="all-done" class="container">
+        <div id="all-done">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <header>
+                    <h3>All done!</h3>   
+                    </header>    
                 </div>
                 <div class="col-md-3"></div>
-        </div>
-        <div class="row">
-            <div class="col-md-3"></div>
-            <div class="col-md-6">
-                <button type="go-back" id="go-back" class="btn btn-primary mb-2">Go Back</button>
-                <button type="clear" id="clear" class="btn btn-primary mb-2">Clear Highscores</button>
             </div>
-            <div class="col-md-3"></div>
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <div id="final-score">Your final score is</div>       
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <form class="form-inline">
+                    Enter Initials:
+                        <div class="form-group mx-sm-3 mb-2">
+                            <label for="inputInitials" class="sr-only"></label>
+                            <input type="initials" class="form-control" id="inputInitials2" placeholder="">
+                        </div>
+                            <button type="submit" id="submit" class="btn btn-primary mb-2">Submit</button>
+                        <div class="col-md-3"></div>
+                    </form>
+                </div>
+            </div>
         </div>
-        </div>
+    </div>
+        <div class="container">
+            <div id="highscore-list" class="hide">
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+                            <h2>Highscores</h2>
+                            <p><strong>1.</strong><span id="highscores"></span>
+                        </div>
+                        <div class="col-md-3"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+                        <button type="go-back" id="go-back" class="btn btn-primary mb-2">Go Back</button>
+                        <button type="clear" id="clear" class="btn btn-primary mb-2">Clear Highscores</button>
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+            </div>
+        </div>    
 <script src="score.js"></script>
 <script src="quiz.js"></script>
 </body>
 </head>
+</html>
 
 
 <!-- href in JS to load a new page. Window.location -->
