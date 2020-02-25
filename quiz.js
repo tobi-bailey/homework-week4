@@ -43,7 +43,7 @@ var startButton = document.getElementById('start-quiz');
 var questionContainer = document.getElementById('question-container');
 var questionEl = document.getElementById('question');
 var answerButtonElement = document.getElementById ('answer-buttons');
-var submissionResponseEl = document.getElementById('right-wring');
+var submissionResponseEl = document.getElementById('right-wrong');
 
 // answers
 var choiceAEl = document.getElementById("A");
@@ -85,23 +85,29 @@ function answerQuestion(event){
   var correctAnswer = questions[currentQuestionIndex].correct;
   if(actualAnswer === correctAnswer){
     points+=5;
-    // var correctResponse = "Right!";
-    // submissionResponseEl.textContent = correctResponse;
+      var correctResponse = "Right!";
+      submissionResponseEl.textContent = correctResponse;
   }
-  // else(actualAnswer !== correctAnswer){
-  //   incorrectResponse = "Wrong!";
-  //   submissionResponseEl.textContent = incorrectResponse;
-  // };
+  else
+  {
+    var incorrectResponse = "Wrong!";
+    submissionResponseEl.textContent = incorrectResponse;
+  }
 
   currentQuestionIndex++;
   setNextQuestion();
 }
 
-
 function startQuiz() {
     startButton.classList.add('hide');
     questionContainer.classList.remove('hide');
     setNextQuestion();
+};
+
+function () {
+  startButton.classList.add('hide');
+  questionContainer.classList.remove('hide');
+  setNextQuestion();
 };
 
 

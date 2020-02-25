@@ -64,10 +64,10 @@ h1 {
     display: none;
 }
 
-/* #question {
-    padding-top: 40px;
-    padding-bottom: 10px;
-    font-weight: bold;
-    font-size: 40px;
+#right-wrong{
+    color: grey;
+    font-size: 30px;
+    font-style: italic;
+    border-top: 1px solid grey;
+    margin-top: 10px;
 }
-     */

@@ -5,6 +5,15 @@ var highscoreSpan = document.querySelector("#highscores");
 var goBackButton = document.querySelector("#go-back");
 var clearButton = document.querySelector("#clear");
 var allDone = document.querySelector("#all-done");
+var finalScore = document.querySelector("final-score");
+
+// var response = "Your final score is" + points + ".";
+//   finalScore.textContent = response;
+
+import {points} from "quiz.js";
+  var response = "Your final score is" + points + ".";
+  finalScore.textContent = response;
+
 
 function renderInitials() {
 
