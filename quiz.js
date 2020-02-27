@@ -44,6 +44,17 @@ var questionContainer = document.getElementById('question-container');
 var questionEl = document.getElementById('question');
 var answerButtonElement = document.getElementById ('answer-buttons');
 var submissionResponseEl = document.getElementById('right-wrong');
+var scorePage = document.getElementById('score-page');
+
+var initialInput = document.querySelector("#inputInitials2");
+var submitButton = document.querySelector("#submit");
+var highscoreSection = document.querySelector("highscore-list");
+var highscoreSpan = document.querySelector("#highscores");
+var goBackButton = document.querySelector("#go-back");
+var clearButton = document.querySelector("#clear");
+var allDone = document.querySelector("#all-done");
+var finalScore = document.querySelector("#final-score");
+var newHighscore = document.querySelector("new-highscore");
 
 // answers
 var choiceAEl = document.getElementById("A");
@@ -57,12 +68,14 @@ choiceDEl.addEventListener('click', answerQuestion);
 
 startButton.addEventListener('click', startQuiz);
 
+
 function loadScorePage() {
-  window.location.assign(href="score.html");
-}
+  questionContainer.classList.add('hide');
+  scorePage.classList.remove('hide');
+};
 
 function setNextQuestion(){
-  if(currentQuestionIndex < questions.length){
+  if(currentQuestionIndex < questions.length-1){
     var nextQuestion = questions[currentQuestionIndex];
     questionEl.innerHTML = nextQuestion.question;
     choiceAEl.innerHTML = nextQuestion.choiceA;
@@ -76,8 +89,7 @@ function setNextQuestion(){
     choiceCEl.addEventListener('click', loadScorePage);
     choiceDEl.addEventListener('click', loadScorePage);
   }
-
-}
+};
 
 function answerQuestion(event){
   var actualAnswer = event.target.id;
@@ -94,6 +106,8 @@ function answerQuestion(event){
     submissionResponseEl.textContent = incorrectResponse;
   }
 
+  console.log(points)
+
   currentQuestionIndex++;
   setNextQuestion();
 }
@@ -104,15 +118,44 @@ function startQuiz() {
     setNextQuestion();
 };
 
-function () {
-  startButton.classList.add('hide');
-  questionContainer.classList.remove('hide');
-  setNextQuestion();
-};
-
-
-// find index returns the index in the array which matches
-// the given expression.
 var index = questions.findIndex(function(question){
     return question
 });
+
+var response = "Your final score is " + points + ".";
+  finalScore.textContent = response;
+
+function renderInitials() {
+
+}
+
+function renderInitials() {
+
+submitButton.addEventListener('click', function(event) {
+  event.preventDefault();
+
+  var initialText = document.querySelector("#inputInitials2").value.trim();
+
+  // var initialText = initialInput.value.trim();
+  if (initialText !== "") {
+    return newHighscore.textContent = initialText;
+  }
+ 
+  initialInput.value = "";
+});
+
+}
+renderInitials();
+
+function highscorePage() {
+  window.location.assign(href="score.html");
+}
+
+submitButton.addEventListener('click', highscorePage);
+
+console.log(event)
+
+// issues, score isn't working
+// initial aren't appending :(
+// go back
+// clear high scores

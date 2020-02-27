@@ -1,42 +1,39 @@
-var initialInput = document.querySelector("#inputInitials2");
-var submitButton = document.querySelector("#submit");
-var highscoreSection = document.querySelector("highscore-list");
-var highscoreSpan = document.querySelector("#highscores");
+// var initialInput = document.querySelector("#inputInitials2");
+// var submitButton = document.querySelector("#submit");
+// var highscoreSection = document.querySelector("highscore-list");
+var highscoreLi = document.querySelector("#highscores");
 var goBackButton = document.querySelector("#go-back");
 var clearButton = document.querySelector("#clear");
-var allDone = document.querySelector("#all-done");
-var finalScore = document.querySelector("final-score");
-
-// var response = "Your final score is" + points + ".";
-//   finalScore.textContent = response;
-
-import {points} from "quiz.js";
-  var response = "Your final score is" + points + ".";
-  finalScore.textContent = response;
+var startQuiz = document.getElementById("#start-quiz");
+var newHighscore = document.querySelector("#new-highscore");
+// var allDone = document.querySelector("#all-done");
+// var finalScore = document.querySelector("final-score");
 
 
-function renderInitials() {
-
+function startQuiz() {
+  window.location.assign(href="index.html");
 }
 
-submitButton.addEventListener('click', function(event) {
-  event.preventDefault();
+goBackButton.addEventListener('click', startQuiz);
 
-  var initialText = initialInput.value.trim();
-  if (initialText !== "") {
-    return highscoreSpan.textContent = initialText;
-  }
- 
-  initialInput.value = "";
-});
-
-submitButton.addEventListener('click', highscores);
-
-
-function highscores() {
-  console.log('highscores');
-  allDone.classList.add('hide');
-  highscoreSection.classList.remove('hide');
-  
-  renderInitials();
+function goBack(){
+  goBackButton.addEventListener('click', function(event) {
+    event.preventDefault();
+})
 };
+
+var highscoreLi = document.querySelector("#new-highscore").lastChild
+
+// goBack()
+// startQuiz()
+
+
+
+// use this code to workout the clearing high scores
+// clearEl.addEventListener('click', function(event) {
+//   event.preventDefault();
+//   textAreaEl.value = '';
+//   elements.forEach(function(element) {
+//     element.textContent = '';
+//   });
+// });
