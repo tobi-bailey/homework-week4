@@ -75,7 +75,7 @@ function loadScorePage() {
 };
 
 function setNextQuestion(){
-  if(currentQuestionIndex < questions.length-1){
+  if(currentQuestionIndex < questions.length){
     var nextQuestion = questions[currentQuestionIndex];
     questionEl.innerHTML = nextQuestion.question;
     choiceAEl.innerHTML = nextQuestion.choiceA;
@@ -104,7 +104,11 @@ function answerQuestion(event){
   {
     var incorrectResponse = "Wrong!";
     submissionResponseEl.textContent = incorrectResponse;
+
   }
+
+  var response = "Your final score is " + points + ".";
+    finalScore.textContent = response;
 
   console.log(points)
 
@@ -122,8 +126,7 @@ var index = questions.findIndex(function(question){
     return question
 });
 
-var response = "Your final score is " + points + ".";
-  finalScore.textContent = response;
+
 
 function renderInitials() {
 

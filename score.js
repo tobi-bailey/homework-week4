@@ -10,22 +10,13 @@ var newHighscore = document.querySelector("#new-highscore");
 // var finalScore = document.querySelector("final-score");
 
 
-function startQuiz() {
-  window.location.assign(href="index.html");
-}
-
 goBackButton.addEventListener('click', startQuiz);
 
-function goBack(){
-  goBackButton.addEventListener('click', function(event) {
-    event.preventDefault();
-})
-};
+
 
 var highscoreLi = document.querySelector("#new-highscore").lastChild
 
-// goBack()
-// startQuiz()
+
 
 
 
