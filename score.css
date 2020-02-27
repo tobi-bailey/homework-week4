@@ -13,6 +13,10 @@ h3{
     border: 0px;
 }
 
+.btn{
+    margin-right: 10px;
+}
+
 .btn-primary,
 .btn-primary:active,
 .btn-primary:visited,
@@ -26,14 +30,17 @@ h3{
     border-color: #572982;
 }
 
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: white;
+    text-decoration: none;
+  }
+
 .hide {
     display: none;
-}
-
-#right-wrong{
-    font-size: 30px;
-    font-style: italic;
-    color: grey;
 }
 
 ol {
